@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "command": "npx vitest related \"$CLAUDE_FILE_PATH\" --run 2>&1 | tail -20"
+      }
+    ]
+  }
+}
